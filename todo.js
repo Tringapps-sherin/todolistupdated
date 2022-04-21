@@ -67,10 +67,10 @@ function store() {
     console.log(signin);
     var signup = JSON.parse(localStorage['signup']);
     console.log(userdetails);
-    for (let list of signup.users) {
-        if (list.username == signin.username && list.password == signin.password) {
+    for (let lt of signup.users) {
+        if (lt.username == signin.username && lt.password == signin.password) {
 
-            list.todolist = userdetails.todolist;
+            lt.todolist = userdetails.todolist;
         }
     }
     console.log(signup);
@@ -102,9 +102,9 @@ function logout() {
 }
 
 function restore() {
-    for (var i = 0; i < userdetails.todolist.length; i++) {
+    for (let i of userdetails.todolist) {
         var li = document.createElement("li");
-        var t = document.createTextNode(userdetails.todolist[i].taskname);
+        var t = document.createTextNode(i.taskname);
     
         li.appendChild(t);
         document.getElementById("myUL").appendChild(li);
