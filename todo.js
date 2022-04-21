@@ -22,10 +22,9 @@ list.addEventListener(
         if (ev.target.tagName === "LI") {
             ev.target.classList.toggle("checked");
             var str = ev.target.innerText;
-            // var check = document.getElementById()
-            for (var i = 0; i < userdetails.todolist.length; i++) {
-                if (userdetails.todolist[i].taskname == str) {
-                    userdetails.todolist[i].checked = 'yes';
+            for (let i of userdetails.todolist) {
+                if (i.taskname == str) {
+                    i.checked = 'yes';
                     break;
                 }
             }
@@ -104,7 +103,6 @@ function logout() {
 
 function restore() {
     for (var i = 0; i < userdetails.todolist.length; i++) {
-        // console.log(userdetails.todolist[i].taskname);
         var li = document.createElement("li");
         var t = document.createTextNode(userdetails.todolist[i].taskname);
     
