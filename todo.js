@@ -13,31 +13,6 @@ $(document).ready(function() {
     }
 });
 
-
-
-
-// Create a "close" button and append it to each list item
-// var myNodelist = document.getElementsByTagName("LI");
-// var i;
-// for (i = 0; i < myNodelist.length; i++) {
-//     // var span = document.createElement("SPAN");
-//     // var txt = document.createTextNode("\u00D7");
-//     span.className = "close";
-//     span.appendChild(txt);
-//     myNodelist[i].appendChild(span);
-// }
-
-// // Click on a close button to hide the current list item
-// var close = document.getElementsByClassName("close");
-// var i;
-// for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function() {
-//         var div = this.parentElement;
-//         div.style.display = "none";
-//     };
-// }
-
-
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector("ul");
 list.addEventListener(
@@ -71,19 +46,7 @@ function newElement() {
         alert("You must write something!");
     } else {
         document.getElementById("myUL").appendChild(li);
-        // var span = document.createElement("SPAN");
-        // var txt = document.createTextNode("\u00D7");
-        // span.className = "close";
-        // span.appendChild(txt);
-        // li.appendChild(span);
-
-        // for (i = 0; i < close.length; i++) {
-        //     close[i].onclick = function() {
-        //         var div = this.parentElement;
-        //         div.style.display = "none";
-        //     };
-        // }
-    }
+         }
     var oldList = document.getElementById("myUL");
     var List = document.getElementById("list");
 
@@ -147,24 +110,7 @@ function restore() {
     
         li.appendChild(t);
         document.getElementById("myUL").appendChild(li);
-        // var span = document.createElement("SPAN");
-        // var txt = document.createTextNode("\u00D7");
-        // span.className = "close";
-        // span.appendChild(txt);
-        // li.appendChild(span);
-
-        // for (i = 0; i < close.length; i++) {
-        //     close[i].onclick = function() {
-        //         var div = this.parentElement;
-        //         div.style.display = "none";
-        //     };
-        // }
-    
-    // var oldList = document.getElementById("myUL");
-    // var List = document.getElementById("list");
-
-    // oldList.style.display = "block"
-    // List.style.display = "none"
+        
     }
 
 }
